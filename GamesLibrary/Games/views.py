@@ -17,6 +17,8 @@ logger = logging.getLogger('Test: ')
 
 # -=-=- Publisher Urls -=-=-
 
+
+# Views for Publisher
 @extend_schema(tags=['Publisher'])
 class PublisherView(APIView):
     def get(self, request):
@@ -70,6 +72,7 @@ class PublisherView(APIView):
             )
 
 
+# Views for Publisher with Id
 @extend_schema(tags=['Publisher'])
 class PublisherViewId(APIView):
     def get(self, request, id):
@@ -99,7 +102,6 @@ class PublisherViewId(APIView):
         try:
 
             publisher = get_object_or_404(Publisher, id=id)
-
             serializer = PublisherSerializer(publisher, data=request.data, partial=True)
             
             if serializer.is_valid():
@@ -141,8 +143,34 @@ class PublisherViewId(APIView):
             )
 
 
+# View for Publisher with Location
+class PublisherViewLocation(APIView):
+    def get(self, request, location):
+        try:
+
+            publishers = Publisher.objects.get(location=location, many=True)
+            serializer = PublisherSerializer(publishers, many=True)
+            return Response(serializer.data)
+        
+        except Publisher.DoesNotExist:
+
+            logger.debug('Publisher with given location not found.')
+            return Response('Error while fetching publishers.', status=status.HTTP_400_BAD_REQUEST)
+        
+        except Exception as e:
+
+            logger.error(e)
+            return Response(
+                {
+                    'status': 'error',
+                    'message': 'Error while listing publishers.',
+                    'error': str(e)
+                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
 # -=-=- Games Urls -=-=-
 
+# Views for Game
 @extend_schema(tags=['Games'])
 class GamesView(APIView):
     def get(self, request):
@@ -196,6 +224,7 @@ class GamesView(APIView):
             )
 
 
+# Views for Game with Id
 @extend_schema(tags=['Games'])
 class GamesViewId(APIView):
     def get(self, request, id):
@@ -267,6 +296,7 @@ class GamesViewId(APIView):
             )
 
 
+# Views for Game with Publisher
 @extend_schema(tags=['Games'])
 class GamesViewPublisher(APIView):
     def get(self, request, publisher):
@@ -291,3 +321,4 @@ class GamesViewPublisher(APIView):
                     'error': str(e)
                 }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+
