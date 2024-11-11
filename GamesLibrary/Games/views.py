@@ -148,14 +148,14 @@ class PublisherViewLocation(APIView):
     def get(self, request, location):
         try:
 
-            publishers = Publisher.objects.get(location=location, many=True)
+            publishers = Publisher.objects.filter(location=location)
+
+            if not publishers:
+                logger.debug('Publisher with given location not found.')
+                return Response('Publisher with given location not found.', status=status.HTTP_400_BAD_REQUEST)
+
             serializer = PublisherSerializer(publishers, many=True)
             return Response(serializer.data)
-        
-        except Publisher.DoesNotExist:
-
-            logger.debug('Publisher with given location not found.')
-            return Response('Error while fetching publishers.', status=status.HTTP_400_BAD_REQUEST)
         
         except Exception as e:
 
@@ -168,11 +168,40 @@ class PublisherViewLocation(APIView):
                 }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
+
+# View for Publisher with Location
+class PublisherViewGames(APIView):
+    def get(self, request, id):
+        try:
+
+            publisher = Publisher.objects.get(id=id)
+            games = publisher.games.all()
+            serializer = GameSerializer(games, many=True)
+            return Response(serializer.data)
+        
+        except Publisher.DoesNotExist:
+
+            logger.debug('Publisher with given ID not found.')
+            raise PublisherIDNotFoundException('Publisher with given ID not found.')
+
+        
+        except Exception as e:
+
+            logger.error(e)
+            return Response(
+                {
+                    'status': 'error',
+                    'message': 'Error while listing publishers.',
+                    'error': str(e)
+                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+        
+
 # -=-=- Games Urls -=-=-
 
 # Views for Game
 @extend_schema(tags=['Games'])
-class GamesView(APIView):
+class GameView(APIView):
     def get(self, request):
         try:
 
@@ -226,7 +255,7 @@ class GamesView(APIView):
 
 # Views for Game with Id
 @extend_schema(tags=['Games'])
-class GamesViewId(APIView):
+class GameViewId(APIView):
     def get(self, request, id):
         try:
 
@@ -296,18 +325,17 @@ class GamesViewId(APIView):
             )
 
 
-# Views for Game with Publisher
-@extend_schema(tags=['Games'])
-class GamesViewPublisher(APIView):
-    def get(self, request, publisher):
+# Views for Game with Genre
+class GameViewGenre(APIView):
+    def get(self, request, genre):
         try:
 
-            games = Game.objects.filter(publisher=publisher)
-            
+            games = Game.objects.filter(genre=genre)
+
             if not games:
-                logger.debug('No games found for the given publisher ID.')
-                return Response('Error while fetching games.', status=status.HTTP_400_BAD_REQUEST)
-            
+                logger.debug('Games with given genre not found.')
+                return Response('Games with given genre not found.', status=status.HTTP_400_BAD_REQUEST)
+
             serializer = GameSerializer(games, many=True)
             return Response(serializer.data)
         
@@ -317,8 +345,7 @@ class GamesViewPublisher(APIView):
             return Response(
                 {
                     'status': 'error',
-                    'message': 'Error while listing games.',
+                    'message': 'Error while listing publishers.',
                     'error': str(e)
                 }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
-

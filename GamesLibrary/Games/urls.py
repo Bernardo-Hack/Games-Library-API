@@ -6,10 +6,11 @@ from . import views
 urlpatterns = [    
     path('publisher/', views.PublisherView.as_view(), name='publisher'),
     path('publisher/<int:id>', views.PublisherViewId.as_view(), name='publisher-id'),
-    path("game/<str:location>", views.PublisherViewLocation.as_view(), name="publisher-location"),
+    path('publisher/<str:location>', views.PublisherViewLocation.as_view(), name='publisher-location'),
+    path('publisher/<int:id>/games', views.PublisherViewGames.as_view(), name='publisher-games'),
     
-    path("game/", views.GamesView.as_view(), name="game"),
-    path("game/<int:id>", views.GamesViewId.as_view(), name="game-id"),
-    path("game/<int:publisher>", views.GamesViewPublisher.as_view(), name="game-publisher"),
+    path('game/', views.GameView.as_view(), name='game'),
+    path('game/<int:id>', views.GameViewId.as_view(), name='game-id'),
+    path('game/<str:genre>', views.GameViewGenre.as_view(), name='game-genre'),
     
 ]
