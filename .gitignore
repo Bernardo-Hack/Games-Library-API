@@ -1,4 +1,9 @@
-*.DS_Store
-*.log
-__pychace__
+# OS
 .DS_Store
+
+# Python
+.venv
+__pychace__
+
+# Django
+*.log
