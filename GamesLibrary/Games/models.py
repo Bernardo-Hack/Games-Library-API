@@ -13,7 +13,7 @@ class Publisher(models.Model):
 
 class Game(models.Model):
     title = models.CharField(max_length=100, unique=True)
-    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
+    publisher = models.ManyToManyField(Publisher, related_name='games')
 
     description = models.TextField()
     release_date = models.DateField()
