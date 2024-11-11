@@ -1,0 +1,6 @@
+Django
+djangorestframework
+django-cors-headers
+mysqlclient
+django-rest-swagger
+drf-spectacular
