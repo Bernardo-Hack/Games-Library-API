@@ -3,7 +3,7 @@
 
 # Python
 .venv
-__pychace__
+__pycache__
 
 # Django
 *.log
