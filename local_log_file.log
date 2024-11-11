@@ -1,0 +1,1364 @@
+2024-11-04 19:32:24,659 WARNING django.request Not Found: /api/list_developers
+2024-11-04 19:32:24,659 WARNING django.server "GET /api/list_developers HTTP/1.1" 404 2509
+2024-11-04 19:32:42,965 WARNING django.request Not Found: /list_developers
+2024-11-04 19:32:42,966 WARNING django.server "GET /list_developers HTTP/1.1" 404 2373
+2024-11-04 19:34:44,581 WARNING django.request Not Found: /api/developers/list_developers
+2024-11-04 19:34:44,582 WARNING django.server "GET /api/developers/list_developers HTTP/1.1" 404 2542
+2024-11-04 19:34:52,798 WARNING django.request Not Found: /api/developer/list_developers
+2024-11-04 19:34:52,798 WARNING django.server "GET /api/developer/list_developers HTTP/1.1" 404 2539
+2024-11-04 19:35:09,666 ERROR Test:  no such table: Games_developer
+2024-11-04 19:35:09,685 ERROR django.request Internal Server Error: /api/developers/
+2024-11-04 19:35:09,685 ERROR django.server "GET /api/developers/ HTTP/1.1" 500 10223
+2024-11-04 19:38:13,490 ERROR Test:  no such table: Games_developer
+2024-11-04 19:38:13,495 ERROR django.request Internal Server Error: /api/developers/
+2024-11-04 19:38:13,496 ERROR django.server "GET /api/developers/ HTTP/1.1" 500 10223
+2024-11-04 19:38:14,838 ERROR Test:  no such table: Games_developer
+2024-11-04 19:38:14,842 ERROR django.request Internal Server Error: /api/developers/
+2024-11-04 19:38:14,843 ERROR django.server "GET /api/developers/ HTTP/1.1" 500 10223
+2024-11-04 19:38:16,379 ERROR Test:  no such table: Games_developer
+2024-11-04 19:38:16,384 ERROR django.request Internal Server Error: /api/developers/
+2024-11-04 19:38:16,384 ERROR django.server "GET /api/developers/?format=api HTTP/1.1" 500 10267
+2024-11-04 19:38:18,028 ERROR Test:  no such table: Games_developer
+2024-11-04 19:38:18,028 ERROR django.request Internal Server Error: /api/developers/
+2024-11-04 19:38:18,029 ERROR django.server "GET /api/developers/?format=json HTTP/1.1" 500 103
+2024-11-04 19:40:18,099 ERROR Test:  no such table: Games_developer
+2024-11-04 19:40:18,123 ERROR django.request Internal Server Error: /api/developers/
+2024-11-04 19:40:18,123 ERROR django.server "GET /api/developers/?format=api HTTP/1.1" 500 10267
+2024-11-04 19:41:08,779 ERROR Test:  no such table: Games_developer
+2024-11-04 19:41:08,801 ERROR django.request Internal Server Error: /api/developers/
+2024-11-04 19:41:08,802 ERROR django.server "GET /api/developers/?format=api HTTP/1.1" 500 10267
+2024-11-04 19:41:43,444 ERROR django.request Internal Server Error: /admin/Games/developer/add/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: Games_developer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1961, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1871, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1294, in save_model
+    obj.save()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 891, in save
+    self.save_base(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 997, in save_base
+    updated = self._save_table(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1160, in _save_table
+    results = self._do_insert(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/base.py", line 1201, in _do_insert
+    return manager._insert(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: Games_developer
+2024-11-04 19:41:43,447 ERROR django.server "POST /admin/Games/developer/add/ HTTP/1.1" 500 197884
+2024-11-04 19:57:02,111 ERROR django.request Internal Server Error: /admin/Games/game/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: Games_game.publisher_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2140, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: Games_game.publisher_id
+2024-11-04 19:57:02,113 ERROR django.server "GET /admin/Games/game/ HTTP/1.1" 500 167811
+2024-11-04 19:57:09,356 ERROR django.request Internal Server Error: /admin/Games/game/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: Games_game.publisher_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2140, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: Games_game.publisher_id
+2024-11-04 19:57:09,356 ERROR django.server "GET /admin/Games/game/ HTTP/1.1" 500 167811
+2024-11-04 19:57:16,923 ERROR django.request Internal Server Error: /admin/Games/game/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: Games_game.publisher_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2140, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: Games_game.publisher_id
+2024-11-04 19:57:16,924 ERROR django.server "GET /admin/Games/game/ HTTP/1.1" 500 167968
+2024-11-04 19:58:36,844 ERROR django.request Internal Server Error: /admin/Games/game/1/change/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: Games_game.publisher_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1964, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1820, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1840, in _changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/contrib/admin/options.py", line 896, in get_object
+    return queryset.get(**{field.name: object_id})
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 645, in get
+    num = len(clone)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: Games_game.publisher_id
+2024-11-04 19:58:36,846 ERROR django.server "GET /admin/Games/game/1/change/ HTTP/1.1" 500 185029
+2024-11-04 20:08:57,622 WARNING django.request Not Found: /api/developers/
+2024-11-04 20:08:57,624 WARNING django.server "GET /api/developers/?format=api HTTP/1.1" 404 2509
+2024-11-04 20:12:49,113 ERROR django.request Internal Server Error: /api/publisher/1
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_publisher() got an unexpected keyword argument 'id'
+2024-11-04 20:12:49,115 ERROR django.server "GET /api/publisher/1 HTTP/1.1" 500 89465
+2024-11-04 20:13:02,258 WARNING django.request Not Found: /api/publisher/id=1
+2024-11-04 20:13:02,260 WARNING django.server "GET /api/publisher/id=1 HTTP/1.1" 404 2792
+2024-11-04 20:13:13,111 WARNING django.request Not Found: /api/publisher/id:1
+2024-11-04 20:13:13,112 WARNING django.server "GET /api/publisher/id:1 HTTP/1.1" 404 2790
+2024-11-04 20:16:22,437 WARNING django.request Not Found: /api/publisher/id:1
+2024-11-04 20:16:22,438 WARNING django.server "GET /api/publisher/id:1 HTTP/1.1" 404 2790
+2024-11-04 20:16:25,733 ERROR django.request Internal Server Error: /api/publisher/1
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_publisher() got an unexpected keyword argument 'id'
+2024-11-04 20:16:25,735 ERROR django.server "GET /api/publisher/1 HTTP/1.1" 500 89465
+2024-11-04 20:18:30,132 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:18:30,165 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:18:30,165 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:18:36,685 WARNING django.request Not Found: /api/publisher/id=1
+2024-11-04 20:18:36,685 WARNING django.server "GET /api/publisher/id=1 HTTP/1.1" 404 2792
+2024-11-04 20:18:45,015 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:18:45,022 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:18:45,023 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:19:04,340 ERROR Test:  'int' object has no attribute 'GET'
+2024-11-04 20:19:04,354 ERROR django.request Internal Server Error: /api/publisher/1
+2024-11-04 20:19:04,354 ERROR django.server "GET /api/publisher/1 HTTP/1.1" 500 10234
+2024-11-04 20:19:34,235 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:19:34,268 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:19:34,268 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:20:02,883 ERROR django.request Internal Server Error: /api/publisher/1
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_publisher() got an unexpected keyword argument 'id'
+2024-11-04 20:20:02,884 ERROR django.server "GET /api/publisher/1 HTTP/1.1" 500 89465
+2024-11-04 20:20:04,250 ERROR django.request Internal Server Error: /api/publisher/1
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_publisher() got an unexpected keyword argument 'id'
+2024-11-04 20:20:04,251 ERROR django.server "GET /api/publisher/1 HTTP/1.1" 500 89465
+2024-11-04 20:20:10,911 ERROR django.request Internal Server Error: /api/publisher/1
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_publisher() got an unexpected keyword argument 'id'
+2024-11-04 20:20:10,912 ERROR django.server "GET /api/publisher/1 HTTP/1.1" 500 89465
+2024-11-04 20:20:12,193 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:20:12,224 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:20:12,225 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:20:14,576 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:20:14,583 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:20:14,583 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:20:14,670 WARNING django.request Not Found: /api/publisher/
+2024-11-04 20:20:14,671 WARNING django.server "GET /api/publisher/ HTTP/1.1" 404 2778
+2024-11-04 20:20:17,200 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:20:17,204 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:20:17,205 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:20:27,037 WARNING django.request Not Found: /api/publisher/id:1
+2024-11-04 20:20:27,038 WARNING django.server "GET /api/publisher/id:1 HTTP/1.1" 404 2790
+2024-11-04 20:20:35,898 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:20:35,903 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:20:35,903 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:20:39,603 WARNING django.request Not Found: /api/publisher/1:id
+2024-11-04 20:20:39,604 WARNING django.server "GET /api/publisher/1:id HTTP/1.1" 404 2790
+2024-11-04 20:21:21,810 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:21:21,840 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:21:21,840 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:22:06,772 WARNING django.request Not Found: /api/publisher/1,1
+2024-11-04 20:22:06,773 WARNING django.server "GET /api/publisher/1,1 HTTP/1.1" 404 2787
+2024-11-04 20:22:10,452 WARNING django.request Not Found: /api/publisher/1;1
+2024-11-04 20:22:10,452 WARNING django.server "GET /api/publisher/1;1 HTTP/1.1" 404 2789
+2024-11-04 20:24:06,331 ERROR django.request Internal Server Error: /api/publisher/1
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_publisher() got an unexpected keyword argument 'id'
+2024-11-04 20:24:06,333 ERROR django.server "GET /api/publisher/1 HTTP/1.1" 500 89465
+2024-11-04 20:25:28,506 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:25:28,539 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:25:28,539 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:26:50,603 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:26:50,638 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:26:50,638 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:26:51,721 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:26:51,730 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:26:51,731 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:27:32,901 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:27:32,935 WARNING django.request Not Found: /api/publisher/1
+2024-11-04 20:27:32,935 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 404 10080
+2024-11-04 20:27:49,614 DEBUG Test:  Parameter Id is necessary.
+2024-11-04 20:27:49,641 WARNING django.request Bad Request: /api/publisher/1
+2024-11-04 20:27:49,641 WARNING django.server "GET /api/publisher/1 HTTP/1.1" 400 10082
+2024-11-04 20:29:50,951 ERROR Test:  No Publisher matches the given query.
+2024-11-04 20:29:50,957 ERROR django.request Internal Server Error: /api/publisher/3
+2024-11-04 20:29:50,957 ERROR django.server "GET /api/publisher/3 HTTP/1.1" 500 10216
+2024-11-04 20:30:42,306 ERROR Test:  No Publisher matches the given query.
+2024-11-04 20:30:42,337 ERROR django.request Internal Server Error: /api/publisher/3
+2024-11-04 20:30:42,338 ERROR django.server "GET /api/publisher/3 HTTP/1.1" 500 10216
+2024-11-04 20:30:50,771 ERROR Test:  No Publisher matches the given query.
+2024-11-04 20:30:50,779 ERROR django.request Internal Server Error: /api/publisher/3
+2024-11-04 20:30:50,779 ERROR django.server "GET /api/publisher/3 HTTP/1.1" 500 10216
+2024-11-04 20:30:50,938 WARNING django.request Not Found: /api/publisher/
+2024-11-04 20:30:50,939 WARNING django.server "GET /api/publisher/ HTTP/1.1" 404 2778
+2024-11-04 20:30:56,223 ERROR Test:  No Publisher matches the given query.
+2024-11-04 20:30:56,227 ERROR django.request Internal Server Error: /api/publisher/5
+2024-11-04 20:30:56,227 ERROR django.server "GET /api/publisher/5 HTTP/1.1" 500 10216
+2024-11-04 20:31:37,693 WARNING django.request Not Found: /api/publisher/a
+2024-11-04 20:31:37,693 WARNING django.server "GET /api/publisher/a HTTP/1.1" 404 2781
+2024-11-04 20:31:46,682 ERROR Test:  No Publisher matches the given query.
+2024-11-04 20:31:46,687 ERROR django.request Internal Server Error: /api/publisher/5
+2024-11-04 20:31:46,687 ERROR django.server "GET /api/publisher/5 HTTP/1.1" 500 10216
+2024-11-04 20:32:28,108 ERROR django.request Internal Server Error: /api/publisher/1
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_publisher() got multiple values for argument 'id'
+2024-11-04 20:32:28,109 ERROR django.server "GET /api/publisher/1 HTTP/1.1" 500 89453
+2024-11-04 20:32:45,486 ERROR django.request Internal Server Error: /api/publisher/2
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_publisher() got multiple values for argument 'id'
+2024-11-04 20:32:45,486 ERROR django.server "GET /api/publisher/2 HTTP/1.1" 500 89453
+2024-11-04 20:32:47,759 ERROR django.request Internal Server Error: /api/publisher/1
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_publisher() got multiple values for argument 'id'
+2024-11-04 20:32:47,760 ERROR django.server "GET /api/publisher/1 HTTP/1.1" 500 89453
+2024-11-04 20:33:33,941 ERROR Test:  No Publisher matches the given query.
+2024-11-04 20:33:33,948 ERROR django.request Internal Server Error: /api/publisher/3
+2024-11-04 20:33:33,948 ERROR django.server "GET /api/publisher/3 HTTP/1.1" 500 10216
+2024-11-04 20:33:41,571 ERROR Test:  No Publisher matches the given query.
+2024-11-04 20:33:41,576 ERROR django.request Internal Server Error: /api/publisher/5
+2024-11-04 20:33:41,577 ERROR django.server "GET /api/publisher/5 HTTP/1.1" 500 10216
+2024-11-05 15:51:35,529 ERROR Test:  No Publisher matches the given query.
+2024-11-05 15:51:35,549 ERROR django.request Internal Server Error: /api/publisher/5
+2024-11-05 15:51:35,549 ERROR django.server "GET /api/publisher/5 HTTP/1.1" 500 10331
+2024-11-05 15:51:36,270 ERROR Test:  No Publisher matches the given query.
+2024-11-05 15:51:36,275 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 15:51:36,275 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10331
+2024-11-05 15:53:30,959 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:53:30,992 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:53:30,993 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105363
+2024-11-05 15:54:16,087 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:54:16,123 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:54:16,124 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105363
+2024-11-05 15:54:41,012 ERROR Test:  Publisher matching query does not exist.
+2024-11-05 15:54:41,043 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 15:54:41,043 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10334
+2024-11-05 15:55:01,530 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:55:01,575 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+TypeError: 'DoesNotExist' object is not callable
+2024-11-05 15:55:01,578 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105381
+2024-11-05 15:55:49,457 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:55:49,499 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:55:49,501 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105363
+2024-11-05 15:56:10,988 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:56:11,029 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:56:11,030 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105363
+2024-11-05 15:56:44,485 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:56:44,507 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:56:44,508 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105437
+2024-11-05 15:56:45,566 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:56:45,581 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:56:45,581 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105437
+2024-11-05 15:56:46,204 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:56:46,245 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:56:46,245 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105437
+2024-11-05 15:56:46,396 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:56:46,436 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:56:46,436 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105437
+2024-11-05 15:56:46,575 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:56:46,602 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:56:46,603 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105437
+2024-11-05 15:56:46,749 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:56:46,792 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:56:46,792 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105437
+2024-11-05 15:56:46,939 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:56:46,977 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:56:46,978 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105437
+2024-11-05 15:57:07,423 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 15:57:07,442 ERROR django.request Internal Server Error: /api/publisher/4
+Traceback (most recent call last):
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 54, in get_publisher
+    publisher = Publisher.objects.get(id=id)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+Games.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/b.hck/Desktop/coding files/Python/BackEndProject/Games/views.py", line 61, in get_publisher
+    raise IDNotFoundException('Publisher with given ID not found.')
+Games.exceptions.IDNotFoundException: Publisher with given ID not found.
+2024-11-05 15:57:07,443 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 105409
+2024-11-05 15:57:18,671 ERROR Test:  Publisher matching query does not exist.
+2024-11-05 15:57:18,683 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 15:57:18,683 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10334
+2024-11-05 15:57:29,315 ERROR Test:  Publisher matching query does not exist.
+2024-11-05 15:57:29,344 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 15:57:29,345 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10334
+2024-11-05 15:57:56,474 ERROR Test:  Publisher matching query does not exist.
+2024-11-05 15:57:56,481 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 15:57:56,481 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10334
+2024-11-05 15:58:30,600 ERROR Test:  Publisher matching query does not exist.
+2024-11-05 15:58:30,624 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 15:58:30,624 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10334
+2024-11-05 15:58:50,966 ERROR Test:  Publisher matching query does not exist.
+2024-11-05 15:58:50,997 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 15:58:50,997 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10334
+2024-11-05 15:59:00,880 ERROR Test:  Publisher matching query does not exist.
+2024-11-05 15:59:00,899 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 15:59:00,900 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10334
+2024-11-05 16:01:18,951 ERROR Test:  No Publisher matches the given query.
+2024-11-05 16:01:18,978 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 16:01:18,978 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10331
+2024-11-05 16:02:14,537 ERROR Test:  Publisher matching query does not exist.
+2024-11-05 16:02:14,568 ERROR django.request Internal Server Error: /api/publisher/4
+2024-11-05 16:02:14,568 ERROR django.server "GET /api/publisher/4 HTTP/1.1" 500 10334
+2024-11-05 16:02:31,877 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 16:02:31,902 WARNING django.request Not Found: /api/publisher/4
+2024-11-05 16:02:31,902 WARNING django.server "GET /api/publisher/4 HTTP/1.1" 404 10204
+2024-11-05 16:03:01,163 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 16:03:01,169 WARNING django.request Not Found: /api/publisher/4
+2024-11-05 16:03:01,170 WARNING django.server "GET /api/publisher/4 HTTP/1.1" 404 10204
+2024-11-05 16:03:10,794 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 16:03:10,801 WARNING django.request Not Found: /api/publisher/3
+2024-11-05 16:03:10,801 WARNING django.server "GET /api/publisher/3 HTTP/1.1" 404 10204
+2024-11-05 16:03:14,670 WARNING django.request Method Not Allowed: /api/publisher/
+2024-11-05 16:03:14,671 WARNING django.server "GET /api/publisher/ HTTP/1.1" 405 10444
+2024-11-05 16:06:25,605 WARNING django.request Method Not Allowed: /api/publisher/
+2024-11-05 16:06:25,606 WARNING django.server "GET /api/publisher/ HTTP/1.1" 405 10444
+2024-11-05 16:06:46,139 WARNING django.request Method Not Allowed: /api/publisher/
+2024-11-05 16:06:46,140 WARNING django.server "GET /api/publisher/ HTTP/1.1" 405 10444
+2024-11-05 16:06:48,620 WARNING django.request Method Not Allowed: /api/publisher/
+2024-11-05 16:06:48,620 WARNING django.server "GET /api/publisher/ HTTP/1.1" 405 10444
+2024-11-05 16:08:09,383 WARNING django.request Bad Request: /api/publisher/
+2024-11-05 16:08:09,386 WARNING django.server "POST /api/publisher/ HTTP/1.1" 400 10443
+2024-11-05 16:10:45,253 WARNING django.request Bad Request: /api/publisher/
+2024-11-05 16:10:45,254 WARNING django.server "POST /api/publisher/ HTTP/1.1" 400 10442
+2024-11-05 16:10:49,275 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 16:10:49,280 WARNING django.request Not Found: /api/publisher/5
+2024-11-05 16:10:49,280 WARNING django.server "GET /api/publisher/5 HTTP/1.1" 404 10204
+2024-11-05 16:16:16,526 WARNING django.request Method Not Allowed: /api/publisher/
+2024-11-05 16:16:16,527 WARNING django.server "GET /api/publisher/ HTTP/1.1" 405 10444
+2024-11-05 16:16:29,719 WARNING django.request Method Not Allowed: /api/publisher/
+2024-11-05 16:16:29,720 WARNING django.server "GET /api/publisher/ HTTP/1.1" 405 10444
+2024-11-05 16:17:08,383 WARNING django.request Not Found: /api/updatepublisher/
+2024-11-05 16:17:08,383 WARNING django.server "GET /api/updatepublisher/ HTTP/1.1" 404 3622
+2024-11-05 16:17:15,875 WARNING django.request Method Not Allowed: /api/updatepublisher/2
+2024-11-05 16:17:15,875 WARNING django.server "GET /api/updatepublisher/2 HTTP/1.1" 405 10567
+2024-11-05 16:17:23,314 WARNING django.request Not Found: /apple-touch-icon-precomposed.png
+2024-11-05 16:17:23,316 WARNING django.request Not Found: /apple-touch-icon.png
+2024-11-05 16:17:23,321 WARNING django.request Not Found: /favicon.ico
+2024-11-05 16:17:23,322 WARNING django.server "GET /apple-touch-icon.png HTTP/1.1" 404 2388
+2024-11-05 16:17:23,322 WARNING django.server "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2424
+2024-11-05 16:17:23,322 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2361
+2024-11-05 16:17:25,281 WARNING django.request Method Not Allowed: /api/updatepublisher/2
+2024-11-05 16:17:25,281 WARNING django.server "GET /api/updatepublisher/2 HTTP/1.1" 405 10567
+2024-11-05 16:19:20,048 WARNING django.request Method Not Allowed: /api/updatepublisher/2
+2024-11-05 16:19:20,048 WARNING django.server "GET /api/updatepublisher/2 HTTP/1.1" 405 10567
+2024-11-05 16:19:48,154 WARNING django.request Method Not Allowed: /api/updatepublisher/1
+2024-11-05 16:19:48,155 WARNING django.server "GET /api/updatepublisher/1 HTTP/1.1" 405 10567
+2024-11-05 16:20:31,938 WARNING django.request Not Found: /api/updatepublisher/
+2024-11-05 16:20:31,939 WARNING django.server "GET /api/updatepublisher/ HTTP/1.1" 404 3622
+2024-11-05 16:20:31,964 WARNING django.request Method Not Allowed: /api/updatepublisher/2
+2024-11-05 16:20:31,964 WARNING django.server "GET /api/updatepublisher/2 HTTP/1.1" 405 10567
+2024-11-05 16:20:35,079 WARNING django.request Method Not Allowed: /api/updatepublisher/2
+2024-11-05 16:20:35,079 WARNING django.server "GET /api/updatepublisher/2 HTTP/1.1" 405 10567
+2024-11-05 16:20:42,531 ERROR Test:  cannot unpack non-iterable int object
+2024-11-05 16:20:42,541 ERROR django.request Internal Server Error: /api/updatepublisher/2
+2024-11-05 16:20:42,542 ERROR django.server "PUT /api/updatepublisher/2 HTTP/1.1" 500 10682
+2024-11-05 16:20:49,257 ERROR Test:  cannot unpack non-iterable int object
+2024-11-05 16:20:49,267 ERROR django.request Internal Server Error: /api/updatepublisher/2
+2024-11-05 16:20:49,268 ERROR django.server "PUT /api/updatepublisher/2 HTTP/1.1" 500 10682
+2024-11-05 16:20:53,339 WARNING django.request Method Not Allowed: /api/updatepublisher/1
+2024-11-05 16:20:53,340 WARNING django.server "GET /api/updatepublisher/1 HTTP/1.1" 405 10567
+2024-11-05 16:21:15,362 WARNING django.request Method Not Allowed: /api/updatepublisher/2
+2024-11-05 16:21:15,363 WARNING django.server "GET /api/updatepublisher/2 HTTP/1.1" 405 10567
+2024-11-05 16:22:02,600 WARNING django.request Bad Request: /api/updatepublisher/1
+2024-11-05 16:22:02,601 WARNING django.server "PUT /api/updatepublisher/1 HTTP/1.1" 400 10564
+2024-11-05 16:23:55,248 WARNING django.request Method Not Allowed: /api/updatepublisher/2
+2024-11-05 16:23:55,249 WARNING django.server "GET /api/updatepublisher/2 HTTP/1.1" 405 10567
+2024-11-05 16:27:57,596 WARNING django.request Not Found: /api/updatepublisher/2
+2024-11-05 16:27:57,597 WARNING django.server "GET /api/updatepublisher/2 HTTP/1.1" 404 3926
+2024-11-05 16:28:03,206 WARNING django.request Method Not Allowed: /api/update_publisher/2
+2024-11-05 16:28:03,207 WARNING django.server "GET /api/update_publisher/2 HTTP/1.1" 405 10571
+2024-11-05 16:28:09,747 WARNING django.request Method Not Allowed: /api/delete_publisher/2
+2024-11-05 16:28:09,748 WARNING django.server "GET /api/delete_publisher/2 HTTP/1.1" 405 9880
+2024-11-05 16:28:13,918 WARNING django.request Method Not Allowed: /api/delete_publisher/3
+2024-11-05 16:28:13,918 WARNING django.server "GET /api/delete_publisher/3 HTTP/1.1" 405 9880
+2024-11-05 16:28:21,011 WARNING django.request Method Not Allowed: /api/delete_publisher/3
+2024-11-05 16:28:21,013 WARNING django.server "GET /api/delete_publisher/3 HTTP/1.1" 405 9880
+2024-11-05 16:28:45,012 WARNING django.request Method Not Allowed: /api/delete_publisher/4
+2024-11-05 16:28:45,013 WARNING django.server "GET /api/delete_publisher/4 HTTP/1.1" 405 9880
+2024-11-05 16:28:48,161 WARNING django.request Method Not Allowed: /api/delete_publisher/5
+2024-11-05 16:28:48,162 WARNING django.server "GET /api/delete_publisher/5 HTTP/1.1" 405 9880
+2024-11-05 16:28:50,463 ERROR Test:  No Publisher matches the given query.
+2024-11-05 16:28:50,471 ERROR django.request Internal Server Error: /api/delete_publisher/5
+2024-11-05 16:28:50,471 ERROR django.server "DELETE /api/delete_publisher/5 HTTP/1.1" 500 9998
+2024-11-05 16:41:26,575 ERROR django.request Internal Server Error: /api/games_by/2
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: get_games_by_publisher() got an unexpected keyword argument 'publisher_id'
+2024-11-05 16:41:26,577 ERROR django.server "GET /api/games_by/2 HTTP/1.1" 500 89651
+2024-11-05 16:42:18,141 DEBUG Test:  Game with given ID not found.
+2024-11-05 16:42:18,169 WARNING django.request Not Found: /api/games_by/3
+2024-11-05 16:42:18,170 WARNING django.server "GET /api/games_by/3 HTTP/1.1" 404 10141
+2024-11-05 16:42:20,977 ERROR Test:  get() returned more than one Game -- it returned 2!
+2024-11-05 16:42:20,985 ERROR django.request Internal Server Error: /api/games_by/2
+2024-11-05 16:42:20,986 ERROR django.server "GET /api/games_by/2 HTTP/1.1" 500 10287
+2024-11-05 16:49:08,032 DEBUG Test:  No games found for the given publisher ID.
+2024-11-05 16:49:08,037 WARNING django.request Not Found: /api/games_by/3
+2024-11-05 16:49:08,037 WARNING django.server "GET /api/games_by/3 HTTP/1.1" 404 10153
+2024-11-05 16:56:59,236 WARNING django.request Method Not Allowed: /api/create_publisher/
+2024-11-05 16:56:59,237 WARNING django.server "GET /api/create_publisher/ HTTP/1.1" 405 10472
+2024-11-05 16:57:20,322 WARNING django.request Bad Request: /api/create_publisher/
+2024-11-05 16:57:20,323 WARNING django.server "POST /api/create_publisher/ HTTP/1.1" 400 10470
+2024-11-05 16:57:51,515 WARNING django.request Method Not Allowed: /api/create_publisher/
+2024-11-05 16:57:51,515 WARNING django.server "GET /api/create_publisher/ HTTP/1.1" 405 10472
+2024-11-05 16:57:56,560 WARNING django.request Bad Request: /api/create_publisher/
+2024-11-05 16:57:56,560 WARNING django.server "POST /api/create_publisher/ HTTP/1.1" 400 10483
+2024-11-05 16:58:57,668 WARNING django.request Bad Request: /api/create_publisher/
+2024-11-05 16:58:57,669 WARNING django.server "POST /api/create_publisher/ HTTP/1.1" 400 10489
+2024-11-05 16:59:26,785 WARNING django.request Not Found: /apple-touch-icon.png
+2024-11-05 16:59:26,791 WARNING django.request Not Found: /favicon.ico
+2024-11-05 16:59:26,796 WARNING django.request Not Found: /apple-touch-icon-precomposed.png
+2024-11-05 16:59:26,797 WARNING django.server "GET /apple-touch-icon.png HTTP/1.1" 404 2388
+2024-11-05 16:59:26,797 WARNING django.server "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2424
+2024-11-05 16:59:26,798 WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2361
+2024-11-05 16:59:40,027 WARNING django.request Method Not Allowed: /api/create_publisher/
+2024-11-05 16:59:40,028 WARNING django.server "GET /api/create_publisher/ HTTP/1.1" 405 10472
+2024-11-05 16:59:42,405 WARNING django.request Method Not Allowed: /api/create_game/
+2024-11-05 16:59:42,406 WARNING django.server "GET /api/create_game/ HTTP/1.1" 405 10427
+2024-11-05 16:59:55,410 WARNING django.request Method Not Allowed: /api/create_publisher/
+2024-11-05 16:59:55,410 WARNING django.server "GET /api/create_publisher/ HTTP/1.1" 405 10472
+2024-11-05 17:00:41,954 WARNING django.request Method Not Allowed: /api/create_game/
+2024-11-05 17:00:41,956 WARNING django.server "GET /api/create_game/ HTTP/1.1" 405 10427
+2024-11-05 17:02:23,004 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:02:23,007 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10435
+2024-11-05 17:03:38,428 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:03:38,429 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10402
+2024-11-05 17:04:08,114 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:04:08,115 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10499
+2024-11-05 17:10:30,564 ERROR Test:  {'title': [ErrorDetail(string='game with this title already exists.', code='unique')]}
+2024-11-05 17:10:30,601 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:10:30,602 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10435
+2024-11-05 17:11:06,276 ERROR Test:  dict_values([[ErrorDetail(string='game with this title already exists.', code='unique')]])
+2024-11-05 17:11:06,309 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:11:06,310 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10435
+2024-11-05 17:13:52,862 ERROR Test:  'string'
+2024-11-05 17:13:52,894 ERROR django.request Internal Server Error: /api/create_game/
+2024-11-05 17:13:52,894 ERROR django.server "POST /api/create_game/ HTTP/1.1" 500 10519
+2024-11-05 17:15:39,551 ERROR Test:  [ErrorDetail(string='game with this title already exists.', code='unique')]
+2024-11-05 17:15:39,587 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:15:39,587 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10435
+2024-11-05 17:16:17,933 DEBUG Test:  [ErrorDetail(string='game with this title already exists.', code='unique')]
+2024-11-05 17:16:17,968 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:16:17,968 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10435
+2024-11-05 17:17:48,689 DEBUG Test:  [ErrorDetail(string='game with this title already exists.', code='unique')]
+2024-11-05 17:17:48,727 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:17:48,728 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10586
+2024-11-05 17:19:19,852 DEBUG Test:  [ErrorDetail(string='game with this title already exists.', code='unique')]
+2024-11-05 17:19:19,852 ERROR Test:  0
+2024-11-05 17:19:19,888 ERROR django.request Internal Server Error: /api/create_game/
+2024-11-05 17:19:19,888 ERROR django.server "POST /api/create_game/ HTTP/1.1" 500 10502
+2024-11-05 17:21:12,673 ERROR Test:  'ErrorDetail' object has no attribute 'string'
+2024-11-05 17:21:12,708 ERROR django.request Internal Server Error: /api/create_game/
+2024-11-05 17:21:12,708 ERROR django.server "POST /api/create_game/ HTTP/1.1" 500 10567
+2024-11-05 17:22:12,516 DEBUG Test:  Error in field 'title': game with this title already exists.
+2024-11-05 17:22:12,551 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:22:12,552 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10435
+2024-11-05 17:22:50,833 DEBUG Test:  {'title': [ErrorDetail(string='game with this title already exists.', code='unique')]}
+2024-11-05 17:22:50,834 ERROR Test:  0
+2024-11-05 17:22:50,873 ERROR django.request Internal Server Error: /api/create_game/
+2024-11-05 17:22:50,874 ERROR django.server "POST /api/create_game/ HTTP/1.1" 500 10502
+2024-11-05 17:23:23,617 DEBUG Test:  {'title': [ErrorDetail(string='game with this title already exists.', code='unique')]}
+2024-11-05 17:23:23,650 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:23:23,651 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10607
+2024-11-05 17:25:35,455 DEBUG Test:  {'title': [ErrorDetail(string='game with this title already exists.', code='unique')]}
+2024-11-05 17:25:35,491 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:25:35,491 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10586
+2024-11-05 17:26:48,331 DEBUG Test:  {'title': [ErrorDetail(string='game with this title already exists.', code='unique')]}
+2024-11-05 17:26:48,331 ERROR Test:  't'
+2024-11-05 17:26:48,365 ERROR django.request Internal Server Error: /api/create_game/
+2024-11-05 17:26:48,366 ERROR django.server "POST /api/create_game/ HTTP/1.1" 500 10514
+2024-11-05 17:26:56,257 DEBUG Test:  {'title': [ErrorDetail(string='game with this title already exists.', code='unique')]}
+2024-11-05 17:26:56,292 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:26:56,292 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10586
+2024-11-05 17:27:26,561 DEBUG Test:  [ErrorDetail(string='game with this title already exists.', code='unique')]
+2024-11-05 17:27:26,591 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:27:26,591 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10586
+2024-11-05 17:27:40,897 ERROR Test:  [ErrorDetail(string='game with this title already exists.', code='unique')]
+2024-11-05 17:27:40,932 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:27:40,933 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10586
+2024-11-05 17:29:31,487 ERROR Test:  [ErrorDetail(string='game with this title already exists.', code='unique')]
+2024-11-05 17:29:31,532 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:29:31,533 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10586
+2024-11-05 17:30:46,311 WARNING django.request Not Found: /api/games_by/e
+2024-11-05 17:30:46,312 WARNING django.server "GET /api/games_by/e HTTP/1.1" 404 5021
+2024-11-05 17:30:51,338 DEBUG Test:  No games found for the given publisher ID.
+2024-11-05 17:30:51,344 WARNING django.request Not Found: /api/games_by/4
+2024-11-05 17:30:51,344 WARNING django.server "GET /api/games_by/4 HTTP/1.1" 404 10153
+2024-11-05 17:31:41,412 WARNING django.request Method Not Allowed: /api/create_game/
+2024-11-05 17:31:41,413 WARNING django.server "GET /api/create_game/ HTTP/1.1" 405 10427
+2024-11-05 17:31:45,768 ERROR Test:  [ErrorDetail(string='game with this title already exists.', code='unique')]
+2024-11-05 17:31:45,777 WARNING django.request Bad Request: /api/create_game/
+2024-11-05 17:31:45,777 WARNING django.server "POST /api/create_game/ HTTP/1.1" 400 10409
+2024-11-05 17:33:36,446 WARNING django.request Not Found: /api/update_game/
+2024-11-05 17:33:36,447 WARNING django.server "GET /api/update_game/ HTTP/1.1" 404 5027
+2024-11-05 17:33:44,971 WARNING django.request Method Not Allowed: /api/update_game/1
+2024-11-05 17:33:44,972 WARNING django.server "GET /api/update_game/1 HTTP/1.1" 405 10526
+2024-11-05 17:35:26,261 WARNING django.request Method Not Allowed: /api/create_game/
+2024-11-05 17:35:26,261 WARNING django.server "GET /api/create_game/ HTTP/1.1" 405 10427
+2024-11-05 17:36:11,696 WARNING django.request Method Not Allowed: /api/delete_game/6
+2024-11-05 17:36:11,697 WARNING django.server "GET /api/delete_game/6 HTTP/1.1" 405 9830
+2024-11-05 17:38:28,532 WARNING django.request Not Found: /api/
+2024-11-05 17:38:28,533 WARNING django.server "GET /api/ HTTP/1.1" 404 5274
+2024-11-05 17:38:39,867 WARNING django.request Not Found: /
+2024-11-05 17:38:39,868 WARNING django.server "GET / HTTP/1.1" 404 2310
+2024-11-05 17:39:02,722 DEBUG Test:  Publisher with given ID not found.
+2024-11-05 17:39:02,727 WARNING django.request Not Found: /api/publisher/4
+2024-11-05 17:39:02,727 WARNING django.server "GET /api/publisher/4 HTTP/1.1" 404 10089
+2024-11-05 17:39:12,422 DEBUG Test:  Game with given ID not found.
+2024-11-05 17:39:12,426 WARNING django.request Not Found: /api/game/7
+2024-11-05 17:39:12,427 WARNING django.server "GET /api/game/7 HTTP/1.1" 404 10019
+2024-11-05 17:42:04,531 WARNING django.request Method Not Allowed: /api/create_game/
+2024-11-05 17:42:04,532 WARNING django.server "GET /api/create_game/ HTTP/1.1" 405 10427
+2024-11-05 17:42:06,078 WARNING django.request Method Not Allowed: /api/create_game/
+2024-11-05 17:42:06,079 WARNING django.server "GET /api/create_game/ HTTP/1.1" 405 10427
+2024-11-05 17:42:07,865 WARNING django.request Method Not Allowed: /api/create_game/
+2024-11-05 17:42:07,866 WARNING django.server "GET /api/create_game/ HTTP/1.1" 405 10427
+2024-11-05 17:43:06,733 WARNING django.request Method Not Allowed: /api/update_game/1
+2024-11-05 17:43:06,734 WARNING django.server "GET /api/update_game/1 HTTP/1.1" 405 10526
+2024-11-05 17:43:06,824 WARNING django.request Not Found: /api/update_game/
+2024-11-05 17:43:06,825 WARNING django.server "GET /api/update_game/ HTTP/1.1" 404 5310
+2024-11-05 17:43:20,150 WARNING django.request Method Not Allowed: /api/update_game/7
+2024-11-05 17:43:20,151 WARNING django.server "GET /api/update_game/7 HTTP/1.1" 405 10526
+2024-11-05 17:44:41,779 WARNING django.request Method Not Allowed: /api/delete_game/7
+2024-11-05 17:44:41,781 WARNING django.server "GET /api/delete_game/7 HTTP/1.1" 405 9830
+2024-11-05 17:45:10,903 WARNING django.request Method Not Allowed: /api/update_game/7
+2024-11-05 17:45:10,904 WARNING django.server "GET /api/update_game/7 HTTP/1.1" 405 10526
+2024-11-05 17:45:16,850 WARNING django.request Method Not Allowed: /api/update_publisher/3
+2024-11-05 17:45:16,851 WARNING django.server "GET /api/update_publisher/3 HTTP/1.1" 405 10571
+2024-11-05 17:45:55,721 WARNING django.request Method Not Allowed: /api/create_game/
+2024-11-05 17:45:55,722 WARNING django.server "GET /api/create_game/ HTTP/1.1" 405 10427
