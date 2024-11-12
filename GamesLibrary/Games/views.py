@@ -13,7 +13,9 @@ from drf_spectacular.utils import extend_schema
 
 # Create your views here.
 
-logger = logging.getLogger('Test: ')
+logger = logging.getLogger('ViewsLog: ')
+
+# TODO : Improve the logging, error handling, and response consistency.
 
 # -=-=- Publisher Urls -=-=-
 
@@ -27,48 +29,39 @@ class PublisherView(APIView):
             publishers = Publisher.objects.all()
 
             if not publishers:
-                logger.debug('No publisher found.')
-                return Response('Error while fetching publishers.', status=status.HTTP_400_BAD_REQUEST)
-            
+                logger.debug('No publishers found.')
+                return Response([], status=status.HTTP_200_OK)
+
             serializer = PublisherSerializer(publishers, many=True)
             return Response(serializer.data)
-        
+
         except Exception as e:
 
-            logger.error(e)
+            logger.error(f"Error while listing publishers: {e}")
             return Response(
-                {
-                    'status': 'error',
-                    'message': 'Error while listing publishers.',
-                    'error': str(e)
-                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                {'status': 'error', 'message': 'Error while listing publishers', 'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
     def post(self, request):
         try:
 
             serializer = PublisherSerializer(data=request.data)
-            
+
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             
             else:
-                logger.error('Publisher already exists.')
-                return Response(
-                    {
-                        'error': 'Publisher already exists.'
-                    }, status=status.HTTP_400_BAD_REQUEST)
-        
+                logger.error(f'Publisher validation failed: {serializer.errors}')
+                return Response({'error': 'Publisher already exists.'}, status=status.HTTP_400_BAD_REQUEST)
+
         except Exception as e:
 
-            logger.error(e)
+            logger.error(f"Error while creating publisher: {e}")
             return Response(
-                {
-                    'status': 'error',
-                    'message': 'Error while creating publisher.',
-                    'error': str(e)
-                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                {'status': 'error', 'message': 'Error while creating publisher', 'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
 
@@ -81,56 +74,71 @@ class PublisherViewId(APIView):
             publisher = Publisher.objects.get(id=id)
             serializer = PublisherSerializer(publisher)
             return Response(serializer.data)
-        
+
         except Publisher.DoesNotExist:
 
-            logger.debug('Publisher with given ID not found.')
-            raise PublisherIDNotFoundException('Publisher with given ID not found.')
-        
+            logger.debug(f'Publisher with given ID {id} not found.')
+            return Response({'detail': f'Publisher with given ID({id}) not found.'}, status=status.HTTP_404_NOT_FOUND)
+
         except Exception as e:
 
-            logger.error(e)
+            logger.error(f"Error while fetching publisher with ID {id}: {e}")
             return Response(
                 {
-                    'status': 'error',
-                    'message': 'Error while listing publishers.',
-                    'error': str(e)
-                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                    'status': 'error', 
+                    'message': 
+                    'Error while fetching publisher', 'error': str(e)
+                },
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
         
+
     def put(self, request, id):
         try:
 
-            publisher = get_object_or_404(Publisher, id=id)
+            publisher = Publisher.objects.get(id=id)
             serializer = PublisherSerializer(publisher, data=request.data, partial=True)
-            
+        
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_200_OK)
-            
-            logger.error(serializer.errors)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+            else:
+                logger.error('Error while updating publisher.')
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        except Publisher.DoesNotExist:
+
+            logger.error(f'Publisher with given ID({id}) not found.')
+            return Response({'detail': f'Publisher with given ID({id}) not found.'}, status=status.HTTP_404_NOT_FOUND)
         
         except Exception as e:
-            logger.error(e)
+            logger.error('Error while updating publisher.')
             return Response(
                 {
                     'status': 'error',
                     'message': 'Error while updating publisher.',
                     'error': str(e)
-                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                },
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
-    
+
+
     def delete(self, request, id):
         try:
 
-            publisher = get_object_or_404(Publisher, id=id)
+            publisher = Publisher.objects.get(id=id)
             publisher.delete()
             
             return Response(
                 {'message': 'Publisher deleted successfully.'},
                 status=status.HTTP_204_NO_CONTENT
             )
+        
+        except Publisher.DoesNotExist:
+
+            logger.error(f'Publisher with given ID({id}) not found.')
+            return Response({'detail': f'Publisher with given ID({id}) not found.'}, status=status.HTTP_404_NOT_FOUND)
         
         except Exception as e:
             logger.error(e)
@@ -143,6 +151,7 @@ class PublisherViewId(APIView):
             )
 
 
+@extend_schema(tags=['Publisher'])
 # View for Publisher with Location
 class PublisherViewLocation(APIView):
     def get(self, request, location):
@@ -151,11 +160,15 @@ class PublisherViewLocation(APIView):
             publishers = Publisher.objects.filter(location=location)
 
             if not publishers:
-                logger.debug('Publisher with given location not found.')
-                return Response('Publisher with given location not found.', status=status.HTTP_400_BAD_REQUEST)
+                raise(Publisher.DoesNotExist)
 
             serializer = PublisherSerializer(publishers, many=True)
             return Response(serializer.data)
+        
+        except Publisher.DoesNotExist:
+
+            logger.debug(f'Publisher with given Location({location}) not found.')
+            return Response({'detail': f'Publisher with given Location({location}) not found.'}, status=status.HTTP_404_NOT_FOUND)
         
         except Exception as e:
 
@@ -169,6 +182,7 @@ class PublisherViewLocation(APIView):
             )
 
 
+@extend_schema(tags=['Publisher'])
 # View for Publisher with Location
 class PublisherViewGames(APIView):
     def get(self, request, id):
@@ -181,8 +195,8 @@ class PublisherViewGames(APIView):
         
         except Publisher.DoesNotExist:
 
-            logger.debug('Publisher with given ID not found.')
-            raise PublisherIDNotFoundException('Publisher with given ID not found.')
+            logger.debug(f'Publisher with given ID({id}) not found.')
+            return Response({'detail': f'Publisher with given ID({id}) not found.'}, status=status.HTTP_404_NOT_FOUND)
 
         
         except Exception as e:
@@ -208,8 +222,8 @@ class GameView(APIView):
             games = Game.objects.all()
             
             if not games:
-                logger.debug('No publisher found.')
-                return Response('Error while fetching games.', status=status.HTTP_400_BAD_REQUEST)
+                logger.debug('No games found.')
+                return Response([], status=status.HTTP_200_OK)
             
             serializer = GameSerializer(games, many=True)
             return Response(serializer.data)
@@ -234,12 +248,8 @@ class GameView(APIView):
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             
-            else:
-                logger.error('Game already exists.')
-                return Response(
-                    {
-                        'error': 'Game already exists.'
-                    }, status=status.HTTP_400_BAD_REQUEST)
+            logger.error(f'Game validation failed: {serializer.errors}')
+            return Response({'error': 'Game already exists.'}, status=status.HTTP_400_BAD_REQUEST)
         
         except Exception as e:
 
@@ -265,8 +275,8 @@ class GameViewId(APIView):
         
         except Game.DoesNotExist:
 
-            logger.debug('Game with given ID not found.')
-            raise GameIDNotFoundException('Game with given ID not found.')
+            logger.debug(f'Game with given ID ({id}) not found.')
+            return Response({'detail': f'Game with given ID({id}) not found.'}, status=status.HTTP_404_NOT_FOUND)
         
         except Exception as e:
 
@@ -282,23 +292,28 @@ class GameViewId(APIView):
     def put(self, request, id):
         try:
 
-            game = get_object_or_404(Game, id=id)
-
+            game = Game.objects.get(id=id)
             serializer = GameSerializer(game, data=request.data, partial=True)
             
             if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_200_OK)
             
-            logger.error(serializer.errors)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            else:
+                logger.error('Error while updating game.')
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+        except Game.DoesNotExist:
+
+            logger.error(f'Game with given ID({id}) not found.')
+            return Response({'detail': f'Game with given ID({id}) not found.'}, status=status.HTTP_404_NOT_FOUND)
         
         except Exception as e:
             logger.error(e)
             return Response(
                 {
                     'status': 'error',
-                    'message': 'Error while updating publisher.',
+                    'message': 'Error while updating game.',
                     'error': str(e)
                 }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
@@ -306,13 +321,18 @@ class GameViewId(APIView):
     def delete(self, request, id):
         try:
 
-            game = get_object_or_404(Game, id=id)
+            game = Game.objects.get(id=id)
             game.delete()
             
             return Response(
                 {'message': 'Game deleted successfully.'},
                 status=status.HTTP_204_NO_CONTENT
             )
+        
+        except Game.DoesNotExist:
+
+            logger.error(f'Game with given ID({id}) not found.')
+            return Response({'detail': f'Game with given ID({id}) not found.'}, status=status.HTTP_404_NOT_FOUND)
         
         except Exception as e:
             logger.error(e)
@@ -325,6 +345,7 @@ class GameViewId(APIView):
             )
 
 
+@extend_schema(tags=['Games'])
 # Views for Game with Genre
 class GameViewGenre(APIView):
     def get(self, request, genre):
@@ -333,11 +354,15 @@ class GameViewGenre(APIView):
             games = Game.objects.filter(genre=genre)
 
             if not games:
-                logger.debug('Games with given genre not found.')
-                return Response('Games with given genre not found.', status=status.HTTP_400_BAD_REQUEST)
+                raise(Game.DoesNotExist)
 
             serializer = GameSerializer(games, many=True)
             return Response(serializer.data)
+        
+        except Game.DoesNotExist:
+
+            logger.debug(f'No games found with given genre({genre}).')
+            return Response({'detail': f'No games found with given genre({genre}).'}, status=status.HTTP_404_NOT_FOUND)
         
         except Exception as e:
 
