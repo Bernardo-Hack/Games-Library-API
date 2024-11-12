@@ -18,6 +18,12 @@ Para instalar as dependências:
     pip install -r requirements.txt
 ```
 
+Para iniciar o servidor:
+
+```bash
+    python GamesLibrary/manage.py runserver
+```
+
 Para executar os testes:
 
 ```bash
