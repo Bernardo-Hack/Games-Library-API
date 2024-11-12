@@ -49,7 +49,7 @@ REST_FRAMEWORK = {
 SPECTACULAR_SETTINGS = {
     'TITLE': 'GamesLibraryAPI',
     'DESCRIPTION': 'API for storing and managing games.',
-    'VERSION': '1.0.0',
+    'VERSION': '1.3',
 }
 
 LOGGING = {

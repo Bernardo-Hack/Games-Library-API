@@ -21,6 +21,7 @@ logger = logging.getLogger('ViewsLog: ')
 # Views for Publisher
 @extend_schema(tags=['Publisher'])
 class PublisherView(APIView):
+    @extend_schema(summary='List all publishers')
     def get(self, request):
         try:
 
@@ -41,6 +42,8 @@ class PublisherView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
+
+    @extend_schema(summary='Create a new publisher')
     def post(self, request):
         try:
 
@@ -66,6 +69,7 @@ class PublisherView(APIView):
 # Views for Publisher with Id
 @extend_schema(tags=['Publisher'])
 class PublisherViewId(APIView):
+    @extend_schema(summary='Get a publisher by ID')
     def get(self, request, id):
         try:
 
@@ -91,6 +95,7 @@ class PublisherViewId(APIView):
             )
         
 
+    @extend_schema(summary='Update a publisher by ID')
     def put(self, request, id):
         try:
 
@@ -122,6 +127,7 @@ class PublisherViewId(APIView):
             )
 
 
+    @extend_schema(summary='Delete a publisher by ID')
     def delete(self, request, id):
         try:
 
@@ -152,6 +158,7 @@ class PublisherViewId(APIView):
 @extend_schema(tags=['Publisher'])
 # View for Publisher with Location
 class PublisherViewLocation(APIView):
+    @extend_schema(summary='Get a publisher by Location')
     def get(self, request, location):
         try:
 
@@ -183,6 +190,7 @@ class PublisherViewLocation(APIView):
 @extend_schema(tags=['Publisher'])
 # View for Publisher with Location
 class PublisherViewGames(APIView):
+    @extend_schema(summary='Get games from a publisher by ID')
     def get(self, request, id):
         try:
 
@@ -214,6 +222,7 @@ class PublisherViewGames(APIView):
 # Views for Game
 @extend_schema(tags=['Games'])
 class GameView(APIView):
+    @extend_schema(summary='List all games')
     def get(self, request):
         try:
 
@@ -237,6 +246,8 @@ class GameView(APIView):
                 }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
+
+    @extend_schema(summary='Create a new game')
     def post(self, request):
         try:
 
@@ -264,6 +275,7 @@ class GameView(APIView):
 # Views for Game with Id
 @extend_schema(tags=['Games'])
 class GameViewId(APIView):
+    @extend_schema(summary='Get a game by ID')
     def get(self, request, id):
         try:
 
@@ -287,6 +299,8 @@ class GameViewId(APIView):
                 }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
+
+    @extend_schema(summary='Update a game by ID')
     def put(self, request, id):
         try:
 
@@ -316,6 +330,8 @@ class GameViewId(APIView):
                 }, status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
+
+    @extend_schema(summary='Delete a game by ID')
     def delete(self, request, id):
         try:
 
@@ -346,6 +362,7 @@ class GameViewId(APIView):
 @extend_schema(tags=['Games'])
 # Views for Game with Genre
 class GameViewGenre(APIView):
+    @extend_schema(summary='Get games by Genre')
     def get(self, request, genre):
         try:
 
