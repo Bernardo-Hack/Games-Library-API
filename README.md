@@ -1,4 +1,4 @@
-# Back End Project
+# GamesLibraryAPI (Back End Project)
 
 Projeto desenvolvido para disciplina de Back-end: Web Services.
 
