@@ -1,12 +1,11 @@
+from datetime import date
 from django.urls import reverse
-
-from rest_framework import status
-from rest_framework.test import APITestCase
 
 from Games.models import Publisher, Game
 from Games.serializers import PublisherSerializer, GameSerializer
 
-from datetime import date
+from rest_framework import status
+from rest_framework.test import APITestCase
 
 # Tests for (almost) all views in the Games app.
 
